@@ -5,8 +5,8 @@ import logging.config
 from logging.handlers import RotatingFileHandler
 
 class OpenDNCLogger(object):
-  def __init__(self):
-    logging.config.fileConfig('../conf/logging.conf')
+  def __init__(self, logConfigFile='../conf/logging.conf'):
+    logging.config.fileConfig(logConfigFile)
     
     # create _logger
     self._logger = logging.getLogger('openDNC')
