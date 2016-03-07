@@ -28,7 +28,7 @@ class OpenDNC(OpenDNCLogger):
     if self.args.OPERATION.lower() == "send":
       with open (self.args.FILENAME, "r") as fileToSend:
         try:
-          rs232DNC.sendData(fileToSend.read())
+          rs232DNC.sendData(fileToSend.read().encode())
         except Exception as ex:
           self._logger.error(ex.message)
           raise
