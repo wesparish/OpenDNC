@@ -104,8 +104,8 @@ may cause Skynet to launch an attack on mankind.
 
   group.add_argument(
       '--xonxoff',
-      action='store_true',
-      help='enable software flow control (default on)',
+      action='store_false',
+      help='disable software flow control (default on)',
       default=True)
 
   group.add_argument(
