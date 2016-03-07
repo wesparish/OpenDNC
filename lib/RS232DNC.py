@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 import serial
-from OpenDNCLogger import OpenDNCLogger
+from lib.OpenDNCLogger import OpenDNCLogger
 from time import sleep
 import io
 
