@@ -93,8 +93,8 @@ may cause Skynet to launch an attack on mankind.
       "--parity",
       choices=['N', 'E', 'O', 'S', 'M'],
       type=lambda c: c.upper(),
-      help="set parity, one of {N E O S M}, default: N",
-      default='N')
+      help="set parity, one of {N E O S M}, default: E",
+      default='E')
 
   group.add_argument(
       '--rtscts',
@@ -104,8 +104,8 @@ may cause Skynet to launch an attack on mankind.
 
   group.add_argument(
       '--xonxoff',
-      action='store_true',
-      help='enable software flow control (default on)',
+      action='store_false',
+      help='disable software flow control (default on)',
       default=True)
 
   group.add_argument(
@@ -123,14 +123,14 @@ may cause Skynet to launch an attack on mankind.
   group.add_argument(
       '--baud-rate',
       type=int,
-      help='set baud rate (default: 9600)',
-      default=9600)
+      help='set baud rate (default: 2400)',
+      default=2400)
 
   group.add_argument(
       '--byte-size',
       type=int,
-      help='set byte size (default: 8)',
-      default=8)
+      help='set byte size (default: 7)',
+      default=7)
 
   group.add_argument(
       '--stop-bits',
